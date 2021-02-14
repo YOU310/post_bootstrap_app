@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-  befor_action :set_post, only: %i[show edit destroy update]
+  before_action :set_post, only: %i[show edit destroy update]
   def index
     @posts = Post.order(id: :asc)
   end
